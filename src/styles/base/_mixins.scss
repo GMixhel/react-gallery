@@ -1,0 +1,77 @@
+@use 'variables' as v;
+
+
+// Mixin para las media queries
+@mixin movil {
+    @media (max-width: v.$movil){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: v.$desktop){
+        @content;
+    }
+}
+
+
+//Para grid simples
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+//Reset lista
+@mixin reset-lista{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+
+//Mixin personalizados segun las necesidades de la pagina
+
+@mixin titleHero {
+    font-size: 5.5em;
+    line-height: 0.9em;
+    font-family: v.$font-principal;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@mixin titleName{
+    font-size: 5em;
+    line-height: 0.9em;
+    font-family: v.$font-principal;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: 0.5rem;
+}
+
+@mixin button{
+    color: v.$principal;
+    background: v.$interaction;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: v.$font-principal;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+

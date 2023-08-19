@@ -1,0 +1,20 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+// --------------- ABOUT
+
+
+
+
+//MEDIAS QUERIES EMAIL
+
+ @include m.desktop{
+
+ }
+ @include m.tablet{
+
+ }
+@include m.movil {
+
+}

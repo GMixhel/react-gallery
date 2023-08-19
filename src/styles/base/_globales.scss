@@ -1,0 +1,114 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+body{
+    background: v.$interaction;
+    overflow-x: hidden;
+}
+
+section[id] {
+    scroll-margin-top: 8rem;
+}
+
+
+// Corregir segun el sitio web
+.container {
+    width: 85%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+p{
+ 
+}
+
+
+h2{
+ 
+}
+
+h3{
+  
+}
+
+h4{
+ 
+}
+
+
+img{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+// Opcional dependiendo de si usas frame motion para transitions-page
+
+.slide-in{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: v.$principal;
+    transform-origin:bottom ;
+    z-index: 3;
+}
+.slide-out{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: v.$principal;
+    transform-origin:top;
+    z-index: 3;
+}
+
+
+//Media Queries Desktop
+
+ @include m.desktop{
+
+        .container{
+            max-width: 68rem ;
+        }
+
+         p {
+             font-size: 1em;
+             line-height: 1.8rem;
+         }
+    
+         h2 {
+             font-size: 3.8em;
+             line-height: 0.9em;
+             letter-spacing: 0.02em;     
+             font-weight: 600;
+             margin-top: 3rem;
+
+         }
+    
+         h3 {
+             font-size: 3em;
+             line-height: 0.9em;
+             letter-spacing: 0.02em;
+             font-weight: 200;
+             margin-top: 0.5rem;
+         }
+    
+         h4 {
+             font-size: 1.5em;
+             letter-spacing: 0.02em;
+             font-weight: 500;
+             margin-bottom: 1.5rem;
+         }
+    
+         span {
+             font-size: 0.9em;
+             line-height: 0.9em;
+             letter-spacing: 0.02em;
+             font-weight: 400;
+             margin-top: 0.5rem;
+         }    
+ }
