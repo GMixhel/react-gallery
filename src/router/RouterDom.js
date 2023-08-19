@@ -2,12 +2,13 @@ import React from 'react'
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import Home from '../layout/Home';
 import About from '../layout/About';
+import Navegation from '../components/Navegation';
 
 export const RouterDom = () => {
   return (
     <BrowserRouter>
       {/*Header del Proyecto*/}
-
+        <Navegation />
       {/*Contenido central*/}
 
       <Routes>
