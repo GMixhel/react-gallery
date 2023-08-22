@@ -2,12 +2,12 @@
 @use '../base/mixins' as m;
 
 body{
-    background: v.$interaction;
+    //background: v.$interaction;
     overflow-x: hidden;
 }
 
-section[id] {
-    scroll-margin-top: 8rem;
+a[id] {
+    scroll-margin-top: 20rem    ;
 }
 
 
@@ -35,13 +35,6 @@ h4{
  
 }
 
-
-img{
-    display: block;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-}
 
 // Opcional dependiendo de si usas frame motion para transitions-page
 
