@@ -14,7 +14,11 @@ const Gallery = () => {
     const handleClick = (e) => {
       console.log(e.target)
       const name = e.target.id;
-      setUrl(name);
+
+      setTimeout(() => {
+         setUrl(name);
+      }, 800);
+     
 
       let details = images.filter((image) => image.id === name);
       setSubtitle(details[0].description);
@@ -29,12 +33,24 @@ const Gallery = () => {
      const handleIntersection = (entries, observer) => {
        entries.forEach((entry) => {
          if (entry.isIntersecting) {
-           const imgId = entry.target.id;  
-               setUrl(imgId);
+           
+             const imgId = entry.target.id;
+            
 
              let details = images.filter((image) => image.id === imgId);
              setSubtitle(details[0].description);
            setTitle(details[0].name);
+           const divImg = document.querySelector(".screen")
+           divImg.classList.add("show")
+           
+           setTimeout(() => {
+             setUrl(imgId);
+             
+              const divImg = document.querySelector(".screen");
+              divImg.classList.remove("show");
+           }, 800);
+      
+         
            entry.target.classList.add("visible");
            
          } else {
@@ -76,6 +92,7 @@ const Gallery = () => {
                 <p className="gallery__detail">{subtitle}</p>
               </div>
               <div className="gallery__img">
+                <div className='screen show'></div>
                 <img
                   className="gallery__selected"
                   alt="img"
