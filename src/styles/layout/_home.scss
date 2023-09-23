@@ -11,7 +11,7 @@
     &__container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center;       
     }
 
     &__selectedImg {
@@ -26,6 +26,8 @@
         transition: opacity 1s cubic-bezier(0.215, 0.610, 0.355, 1);
         opacity: 1;
     }
+
+  
     
 
     &__description {
@@ -33,6 +35,8 @@
         flex-direction: column;
         justify-content: flex-end;
         font-size: 1.5em;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
 
     &__name {
@@ -48,6 +52,7 @@
         margin-bottom: 0.1rem;
         filter: grayscale(1);
         transition: 1s all cubic-bezier(0.215, 0.610, 0.355, 1);
+        
     }
 
     &__jpg {
@@ -66,7 +71,9 @@
         width: 28rem;
         height: 40rem;
         overflow: hidden;
-        transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+
     }
 
     &__img img {
@@ -78,22 +85,20 @@
     &__album {
         margin: 25rem 0;
         margin-left: 60%;
-
     }
 
     .visible {
         filter: grayscale(0);
     }
 
-  .show{
-    width: 100%;
-    height: 100%;
-    background: white;
-    z-index: 1;
-    transition: all 1s ease-in-out;
-  }
 }
 
+.clipath{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.clipathText{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
 
 
 //MEDIAS QUERIES 
