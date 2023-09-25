@@ -16,7 +16,7 @@
 
     &__selectedImg {
         display: grid;
-        grid-template-columns: 20rem 30rem;
+        grid-template-columns: 25rem 30rem;
         justify-items: left;
         column-gap: 8rem;
         height: max-content;
@@ -27,20 +27,19 @@
         opacity: 1;
     }
 
-  
-    
-
     &__description {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        font-size: 1.5em;
+        justify-content: flex-end;        
+        letter-spacing: 0.1rem;
         clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
         transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
     }
 
     &__name {
         font-weight: 600;
+        font-family: Rosseta;
+        font-size: 4.5em;
     }
 
 

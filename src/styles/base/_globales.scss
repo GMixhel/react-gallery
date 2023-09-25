@@ -1,9 +1,17 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
+@font-face {
+    font-family:Rosseta;
+    src: url(../font/Rosseta.otf);
+}
+
 body{
     //background: v.$interaction;
     overflow-x: hidden;
+    background: #F2F2F2;
+    color: #011126;
+    
 }
 
 a[id] {
@@ -13,7 +21,7 @@ a[id] {
 
 // Corregir segun el sitio web
 .container {
-    width: 85%;
+    width: 90%;
     max-width: 120rem;
     margin: 0 auto;
 }
